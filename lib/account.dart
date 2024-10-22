@@ -68,7 +68,7 @@ class _AccountState extends State<Account> {
                                 errorText: 'Name must be at least 8 characters')
                           ]).call,
                           decoration: InputDecoration(
-                              hintText: 'Adhitama',
+                              hintText: 'your name',
                               labelText: 'Name',
                               prefixIcon: Icon(Icons.account_circle_rounded),
                               floatingLabelStyle: TextStyle(
@@ -116,7 +116,7 @@ class _AccountState extends State<Account> {
                             EmailValidator(errorText: 'Enter a valid email'),
                           ]).call,
                           decoration: InputDecoration(
-                              hintText: 'Adhitama@gmail.com',
+                              hintText: 'you@gmail.com',
                               labelText: 'Email',
                               prefixIcon: Icon(Icons.email_rounded),
                               floatingLabelStyle: TextStyle(
@@ -314,8 +314,9 @@ class _AccountState extends State<Account> {
                     child: Column(
                       children: [
                         TextFormField(
+                          obscureText: true,
                           decoration: InputDecoration(
-                            hintText: 'Admin123',
+                            hintText: '••••••••',
                             labelText: 'Old Password',
                             prefixIcon: Icon(Icons.key),
                             floatingLabelStyle: TextStyle(
@@ -323,6 +324,10 @@ class _AccountState extends State<Account> {
                               fontSize: 24,
                               fontFamily: 'AkayaTelivigala',
                             ),
+                            hintStyle: TextStyle(
+                              fontFamily: 'AkayaTelivigala',
+                              color: Color.fromARGB(100, 22, 41, 56),
+                            ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide: BorderSide(
@@ -350,8 +355,9 @@ class _AccountState extends State<Account> {
                           height: 24,
                         ),
                         TextFormField(
+                          obscureText: true,
                           decoration: InputDecoration(
-                            hintText: 'Admin123',
+                            hintText: '••••••••',
                             labelText: 'New Password',
                             prefixIcon: Icon(Icons.key),
                             floatingLabelStyle: TextStyle(
@@ -359,6 +365,10 @@ class _AccountState extends State<Account> {
                               fontSize: 24,
                               fontFamily: 'AkayaTelivigala',
                             ),
+                            hintStyle: TextStyle(
+                              fontFamily: 'AkayaTelivigala',
+                              color: Color.fromARGB(100, 22, 41, 56),
+                            ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide: BorderSide(
@@ -386,14 +396,19 @@ class _AccountState extends State<Account> {
                           height: 24,
                         ),
                         TextFormField(
+                          obscureText: true,
                           decoration: InputDecoration(
-                            hintText: 'Admin123',
+                            hintText: '••••••••',
                             labelText: 'Confirm Password',
                             prefixIcon: Icon(Icons.key),
                             floatingLabelStyle: TextStyle(
                               color: Color.fromARGB(255, 22, 41, 56),
                               fontSize: 24,
                               fontFamily: 'AkayaTelivigala',
+                            ),
+                            hintStyle: TextStyle(
+                              fontFamily: 'AkayaTelivigala',
+                              color: Color.fromARGB(100, 22, 41, 56),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
