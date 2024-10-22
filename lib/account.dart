@@ -17,10 +17,14 @@ class _AccountState extends State<Account> {
   final TextEditingController _emailController = TextEditingController();
   String _sex = 'Select Sex';
   final TextEditingController _birthdayController = TextEditingController();
+  bool _obscureOld = true;
+  bool _obscureNew = true;
+  bool _obscureConfirm = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text(
           'Account',
@@ -314,11 +318,23 @@ class _AccountState extends State<Account> {
                     child: Column(
                       children: [
                         TextFormField(
-                          obscureText: true,
+                          obscureText: _obscureOld,
                           decoration: InputDecoration(
                             hintText: '••••••••',
                             labelText: 'Old Password',
                             prefixIcon: Icon(Icons.key),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _obscureOld
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _obscureOld = !_obscureOld;
+                                });
+                              },
+                            ),
                             floatingLabelStyle: TextStyle(
                               color: Color.fromARGB(255, 22, 41, 56),
                               fontSize: 24,
@@ -355,11 +371,23 @@ class _AccountState extends State<Account> {
                           height: 24,
                         ),
                         TextFormField(
-                          obscureText: true,
+                          obscureText: _obscureNew,
                           decoration: InputDecoration(
                             hintText: '••••••••',
                             labelText: 'New Password',
                             prefixIcon: Icon(Icons.key),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _obscureNew
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _obscureNew = !_obscureNew;
+                                });
+                              },
+                            ),
                             floatingLabelStyle: TextStyle(
                               color: Color.fromARGB(255, 22, 41, 56),
                               fontSize: 24,
@@ -396,11 +424,23 @@ class _AccountState extends State<Account> {
                           height: 24,
                         ),
                         TextFormField(
-                          obscureText: true,
+                          obscureText: _obscureConfirm,
                           decoration: InputDecoration(
                             hintText: '••••••••',
                             labelText: 'Confirm Password',
                             prefixIcon: Icon(Icons.key),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _obscureConfirm
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _obscureConfirm = !_obscureConfirm;
+                                });
+                              },
+                            ),
                             floatingLabelStyle: TextStyle(
                               color: Color.fromARGB(255, 22, 41, 56),
                               fontSize: 24,

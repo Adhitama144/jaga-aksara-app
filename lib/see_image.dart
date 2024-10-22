@@ -14,9 +14,7 @@ class _SeeImageState extends State<SeeImage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(
-          color: Colors.white,
-        ),
+        iconTheme: IconThemeData(color: Colors.white, size: 32),
         title: const Text(
           'See Image Full',
           style: TextStyle(
