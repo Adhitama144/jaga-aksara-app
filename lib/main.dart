@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'account.dart';
+import 'chatbot.dart';
+// import 'dashboard.dart';
 
 void main(List<String> args) {
-  runApp(const MaterialApp(
-    home: Account(),
-  ));
+  runApp(const MaterialApp(home: ChatBot()));
 }

@@ -82,7 +82,7 @@ class _AccountState extends State<Account> {
                               ),
                               labelStyle: TextStyle(
                                 fontFamily: 'AkayaTelivigala',
-                                color: Color.fromARGB(100, 22, 41, 56),
+                                color: Color.fromRGBO(22, 41, 56, 0.392),
                               ),
                               hintStyle: TextStyle(
                                 fontFamily: 'AkayaTelivigala',
