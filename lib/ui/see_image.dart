@@ -4,9 +4,7 @@ class SeeImage extends StatefulWidget {
   const SeeImage({super.key});
 
   @override
-  State<StatefulWidget> createState() {
-    return _SeeImageState();
-  }
+  State<SeeImage> createState() => _SeeImageState();
 }
 
 class _SeeImageState extends State<SeeImage> {
@@ -14,7 +12,7 @@ class _SeeImageState extends State<SeeImage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white, size: 32),
+        leading: BackButton(color: Colors.white),
         title: const Text(
           'See Image Full',
           style: TextStyle(

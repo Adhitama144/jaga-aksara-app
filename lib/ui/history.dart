@@ -5,17 +5,15 @@ class History extends StatefulWidget {
   const History({super.key});
 
   @override
-  State<StatefulWidget> createState() {
-    return _HistoryState();
-  }
+  State<History> createState() => _HistoryState();
 }
 
 class _HistoryState extends State<History> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: BackButton(color: Colors.white),
         title: const Text(
           'History',
           style: TextStyle(
@@ -65,12 +63,12 @@ class _HistoryState extends State<History> {
                           width: 100,
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 24,
                         ),
                         Column(
                           children: [
                             SizedBox(
-                              width: 200,
+                              width: 150,
                               child: Text(
                                 '30/12/2045',
                                 textAlign: TextAlign.left,
@@ -78,17 +76,6 @@ class _HistoryState extends State<History> {
                                   color: Color.fromARGB(255, 22, 41, 56),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 24,
-                                  fontFamily: 'AkayaTelivigala',
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 200,
-                              child: Text(
-                                'Lorem ipsum dolor sit amet personal hyperbolla idim ...',
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 22, 41, 56),
-                                  fontSize: 14,
                                   fontFamily: 'AkayaTelivigala',
                                 ),
                               ),

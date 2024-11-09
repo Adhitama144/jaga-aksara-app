@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-class Scan extends StatefulWidget {
-  const Scan({super.key});
+class Transliterate extends StatefulWidget {
+  const Transliterate({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return _ScanState();
+    return _TransliterateState();
   }
 }
 
-class _ScanState extends State<Scan> {
+class _TransliterateState extends State<Transliterate> {
   late List<CameraDescription> cameras;
   late CameraController cameraController;
   bool isCameraReady = false;
@@ -128,9 +128,10 @@ class _ScanState extends State<Scan> {
       overlayColor: const Color.fromARGB(255, 255, 183, 3).withOpacity(0.3),
       child: Scaffold(
         appBar: AppBar(
+          leading: BackButton(color: Colors.white),
           title: const Center(
             child: Text(
-              'Scan & Transliterasi',
+              'Transliterate',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -138,7 +139,6 @@ class _ScanState extends State<Scan> {
                   fontFamily: 'AkayaTelivigala'),
             ),
           ),
-          automaticallyImplyLeading: false,
           backgroundColor: const Color.fromARGB(255, 255, 183, 3),
         ),
         body: content,

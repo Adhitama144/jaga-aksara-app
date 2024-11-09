@@ -5,19 +5,15 @@ class Read extends StatefulWidget {
   const Read({super.key});
 
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return _ReadState();
-  }
+  State<Read> createState() => _ReadState();
 }
 
 class _ReadState extends State<Read> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white, size: 32),
+        leading: BackButton(color: Colors.white),
         title: const Text(
           'Read',
           style: TextStyle(
